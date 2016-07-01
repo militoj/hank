@@ -1,22 +1,11 @@
-var http = require('http');
-var fs = require('fs');
-const PORT=8080;
+var express = require('express');
+var app = express();
+var path = require('path');
 
-function handleRequest(req, res){
-  fs.readFile('./eatShitHank.html', function(error, content) {
-        if (error) {
-            res.writeHead(500);
-            res.end();
-        }
-        else {
-            res.writeHead(200, { 'Content-Type': 'text/html' });
-            res.end(content, 'utf-8');
-        }
-    });
-}
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname+'/eatShitHank.html'));
+});
 
-var server = http.createServer(handleRequest);
-
-server.listen(PORT, function(){
-  console.log("Server listening on: http://localhost:%s", PORT);
+app.listen(8080, function(){
+  console.log("Server listening on: http://localhost:%s", 8080);
 });
