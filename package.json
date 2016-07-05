@@ -1,0 +1,23 @@
+{
+  "name": "eat_shit_hank",
+  "version": "1.0.0",
+  "description": "srsly, eat shit",
+  "main": "myFirstHTTPServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/militoj/eat_shit_hank.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/militoj/eat_shit_hank/issues"
+  },
+  "homepage": "https://github.com/militoj/eat_shit_hank#readme",
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
